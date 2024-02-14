@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import '../main.dart';
+
+import '../functions.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -10,7 +11,9 @@ class HomePage extends StatelessWidget {
     themeText = Theme.of(context).textTheme;
     return Scaffold(
       appBar: appBar(appTitle),
-      body: Center(child: Text(appTitle, style: themeText.titleLarge)),
+      body: Center(
+          child:
+              textBox(appTitle, color: themeColor.error, size: 36, bold: true)),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         child: const Icon(Icons.add),
